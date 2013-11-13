@@ -1,0 +1,29 @@
+git clone git@github.com:hagix9/docker_images.git
+
+cat centos-60.tar.xz | docker import - centos60
+docker run -i -t -d -p 11111:22 --name centos01 centos60 /sbin/init
+ssh root@localhost -p 11111 #PASSWORD: root
+
+cat centos-61.tar.xz | docker import - centos61
+docker run -i -t -d -p 11111:22 --name centos01 centos61 /sbin/init
+ssh root@localhost -p 11111 #PASSWORD: root
+
+cat centos-62.tar.xz | docker import - centos62
+docker run -i -t -d -p 11111:22 --name centos01 centos62 /sbin/init
+ssh root@localhost -p 11111 #PASSWORD: root
+
+cat centos-63.tar.xz | docker import - centos63
+docker run -i -t -d -p 11111:22 --name centos01 centos63 /sbin/init
+ssh root@localhost -p 11111 #PASSWORD: root
+
+cat centos-64.tar.xz | docker import - centos64
+docker run -i -t -d -p 11111:22 --name centos01 centos64 /sbin/init
+ssh root@localhost -p 11111 #PASSWORD: root
+
+cat ubuntu_1310.tar.xz | docker import - ubuntu1310
+docker run -i -t -d -p 11111:22 --name ubuntu01 ubuntu1310 /sbin/init
+ssh ubuntu@localhost -p 11111 #PASSWORD: root
+
+cat ubuntu_1204.tar.xz | docker import - ubuntu1204
+docker run -i -t -d -p 11111:22 --name ubuntu01 ubuntu1204 /sbin/init
+ssh root@localhost -p 11111 #PASSWORD: root
